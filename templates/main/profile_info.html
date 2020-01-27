@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for member in all_members %}
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <div class="card">
+          <div class="card-body">
+          {% if book.photo %}
+          <img class="card-img-top" width="240" height="320" src="{{ book.photo.url }}" />
+            {% else %}
+            <img class="img" width="240" height="320" src="https://images-na.ssl-images-amazon.com/images/I/41fhsnzKEgL._SX258_BO1,204,203,200_.jpg" alt="">
+            {% endif %}
+        </div>
+        <div class="card-footer ">
+            <h3><a href="{% url 'profile_info' member.id %">  </a></h3>
+            <h3>{{member.age.Age}}</h3>
+            <h3>{{member.gender.Gender}}</h3>
+            <h3>{{member.phone.Phone}}</h3>
+            <h3>{{member.state.State}}</h3>
+            <h3>{{member.languages.Languages}}</h3>
+            <h3>{{member.occupation.Occupation}}</h3>
+            
+        </div>
+        </div>
+        </div>
+        {% endfor %}
+        {% endblock content %}

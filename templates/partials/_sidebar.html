@@ -1,32 +1,37 @@
 {% load static %}
-
 <div class="sidebar">
-    <nav class="sidebar-nav">
+<nav class="sidebar-nav">
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link" href="# ">
+                <a class="nav-link" href=" {% url 'book'%} ">
                 <i class="fas fa-tachometer-alt"></i> Dashboard
-                
                 </a>
+
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="# ">
+                <a class="nav-link" href="{% url 'listings'%} ">
                 <i class="fas fa-wallet"></i> Books
+                </a>
+
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'admin:authors_author_add' %} ">
+                <i class="fas fa-wallet"></i> Author
                 </a>
             </li> 
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                <i class="fas fa-money-check-alt"></i> Authors
+                <a class="nav-link" href="{% url 'all_profiles' %">
+                <i class="fa fa-user"></i> 
+                Profile
                 </a>
             </li>
-            
-            
-            <li class="nav-item mt-auto">
-                <a class="nav-link nav-link-success" href="{% url 'admin:index' %} " target="_top">
-                <i class="fas fa-user-shield"></i>  
+            <li class="nav-item mt-auto"> 
+                <a class="nav-link nav-link-success" href="{% url 'admin:index' %}" target="_top">
+                <i class="fas fa-user-shield"></i> 
                 <strong>Admin</strong>
                 </a>
+            </li>
         </ul>
     </nav>
+    </div>
     <button class="sidebar-minimizer brand-minimizer" type="button"></button>
-</div>

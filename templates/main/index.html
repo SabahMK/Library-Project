@@ -4,14 +4,14 @@
 
     <h1>Home Page</h1>
 
-    <table class="table-bordered">
-        <thead>
+    <table class=" table table-bordered ">
+        <thead class="table-dark">
             <th>Book Title</th>
             <th>Author</th>
             <th>Page</th>
             <th>Published on</th>
         </thead>
-        <tbody>
+        <tbody class="table-hover">
             {% for book in all_books %}
                 <tr>
                     <td>{{book.name}} </td>
